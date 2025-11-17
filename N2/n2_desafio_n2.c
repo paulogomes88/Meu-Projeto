@@ -7,7 +7,7 @@
 int main () {
 
     /* Declaração das Variáveis para Carta 1 */
-    char estado[1] = "A";
+    char estado[2] = "A";
     char codigo[6] = "01";
     char nomeDaCidade[20] = "Sampa";
     int populacao = 12325000;
@@ -17,8 +17,8 @@ int main () {
     float densidadePopulacao;
     float pibPerCapita;
 
-    densidadePopulacao = populacao / area;
-    pibPerCapita = (float)pib / populacao;
+    densidadePopulacao = (float) populacao / area;
+    pibPerCapita = (float) populacao / pib;
     
     printf("Carta 01\n");
     printf("Estado: %s\n", estado);
@@ -32,6 +32,7 @@ int main () {
     printf("PIB per Capita: %.2f reais\n", pibPerCapita);
 
     /* Declaração das Variáveis para Carta 2 */
+    
     char estado2[2] = "B";
     char codigo2[6] = "02";
     char nomeDaCidade2[20] = "RIO";
@@ -42,8 +43,9 @@ int main () {
     float densidadePopulacao2;
     float pibPerCapita2;
 
-    densidadePopulacao2 = populacao2 / area2;
-    pibPerCapita2 = pib2 / (float)populacao2;
+    densidadePopulacao2 = (float) populacao2 / area2;
+    pibPerCapita2 = (float) populacao2 / pib2;
+
 
     printf("\nCarta 02\n");
     printf("Estado: %s\n", estado2);
@@ -54,7 +56,7 @@ int main () {
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", qtdPontoTuristico2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacao2);
-    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2); 
 
     printf("=====================================================\n");
     return 0;
