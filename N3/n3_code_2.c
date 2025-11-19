@@ -7,4 +7,6 @@ int main(){
     printf("Numero normal: %d\n", numeroSinal);
     printf("Numero grande: %u\n", numeroSemSinal);
     return 0;
+
+    
 }
