@@ -23,6 +23,8 @@ int main(){
     double valorTotalA;
     double valorTotalB;
 
+    int resultadoA, resultadoB;
+
     // Exibir as informações na tela
     printf("Produto %s tem estoque %u e o valor unitário é %.2f\n", produtoA, estoqueA, valorA);
     printf("Produto %s tem estoque %u e o valor unitário é %.2f\n", produtoB, estoqueB, valorB);
