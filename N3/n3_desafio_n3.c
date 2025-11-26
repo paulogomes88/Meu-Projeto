@@ -18,7 +18,7 @@ int main () {
     float densidadePopulacao = (float) populacao / area;
     float pibPerCapita = (float) populacao / pib;
 
-    float superPoder;
+    float superPoder = (float) populacao + area + pib + (float) qtdPontoTuristico + densidadePopulacao + pibPerCapita;
     
     printf("Carta 01\n");
     printf("Estado: %s\n", estado);
@@ -71,6 +71,8 @@ int main () {
     } else {
         printf("Carta 2\n");
     }
+
+    printf("Super Poder da Carta 1: %.2f \n", superPoder);
 
     
 
