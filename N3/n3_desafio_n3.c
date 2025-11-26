@@ -14,10 +14,8 @@ int main () {
     float area = 1521.11;
     float pib = 699.28;
     int qtdPontoTuristico = 50;
-
     float densidadePopulacao = (float) populacao / area;
     float pibPerCapita = (float) populacao / pib;
-
     float superPoder = (float) populacao + area + pib + (float) qtdPontoTuristico + densidadePopulacao + pibPerCapita;
     
     printf("Carta 01\n");
@@ -30,6 +28,7 @@ int main () {
     printf("Número de Pontos Turísticos: %d\n", qtdPontoTuristico);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacao);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita);
+    printf("Super Poder da Carta 1: %.2f\n", superPoder);
 
     /* Declaração das Variáveis para Carta 2 */
     
@@ -42,6 +41,8 @@ int main () {
     int qtdPontoTuristico2= 30;
     float densidadePopulacao2 = (float) populacao2 / area2;
     float pibPerCapita2 = (float) populacao2 / pib2;
+    float superPoder2 = (float) populacao2 + area2 + pib2 + (float) qtdPontoTuristico2 + densidadePopulacao2 + pibPerCapita2;
+    
 
     printf("\nCarta 02\n");
     printf("Estado: %s\n", estado2);
@@ -53,6 +54,7 @@ int main () {
     printf("Número de Pontos Turísticos: %d\n", qtdPontoTuristico2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacao2);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2); 
+    printf("Super Poder da Carta 2: %.2f\n", superPoder2);
 
     // ### Comparação entre duas Cartas ###
 
@@ -60,21 +62,72 @@ int main () {
 
     // 2. Calcular o Super Poder: Para cada carta, calcule o "Super Poder" somando todos os atributos numéricos (população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional – quanto menor a densidade, maior o "poder"). Armazene o Super Poder como float. Atenção: Preste muita atenção na conversão de tipos ao somar valores de tipos diferentes!
 
-
-
     // Comparar as Cartas: Compare as duas cartas atributo por atributo (exceto estado, código e nome), incluindo o Super Poder. Lembre-se: para a densidade populacional, a carta com o menor valor vence; para os demais atributos (incluindo Super Poder), a carta com o maior valor vence.
 
-    printf("\n==== Comparação ====\n");
+    printf("\n==== Comparação de Cartas ====\n");
 
-    if (populacao > populacao2){
-        printf("Carta 1\n");
+    // População (populacao)
+    if (populacao > populacao2) {
+        printf("População: Carta 1 venceu\n");
+    } else if (populacao < populacao2) {
+        printf("População: Carta 2 venceu\n");
     } else {
-        printf("Carta 2\n");
+        printf("População: O valor das duas cartas são iguais!\n");
     }
 
-    printf("Super Poder da Carta 1: %.2f \n", superPoder);
+    // Área (area)
+    if (area > area2){
+        printf("Área: Carta 1 venceu\n");
+    } else if (area < area2){
+        printf("Área: Carta 2 venceu\n");
+    } else {
+        printf("Área: O valor das duas cartas são iguais!\n");
+    }
 
-    
+    // PIB (pib)
+    if (pib > pib2){
+        printf("PIB: Carta 1 venceu\n");
+    } else if (pib < pib2){
+        printf("PIB: Carta 2 venceu\n");
+    } else {
+        printf("PIB: O valor das duas cartas são iguais!\n");
+    }
+
+    // Quantidade de Ponto Turístico (qtdPontoTuristico)
+    if (qtdPontoTuristico > qtdPontoTuristico2) {
+        printf("Pontos Turísticos: Carta 1 venceu\n");
+    } else if (qtdPontoTuristico < qtdPontoTuristico2) {
+        printf("Pontos Turísticos: Carta 2 venceu\n");
+    } else {
+        printf("Pontos Turísticos: O valor das duas cartas são iguais!\n");
+    }
+
+    // Densidade da População (densidadePopulacao) Menor valor é o que vence
+    if (densidadePopulacao < densidadePopulacao2){
+        printf("Densidade População: Carta 1 venceu\n");
+    } else if (densidadePopulacao > densidadePopulacao2){
+        printf("Densidade População: Carta 2 venceu\n");
+    } else {
+        printf("Densidade População: O valor das duas cartas são iguais!\n");
+    }
+
+    // Pib Per Capta (pibPerCapita)
+    if (pibPerCapita > pibPerCapita2){
+        printf("PIB Per Capta: Carta 1 venceu\n");
+    } else if (pibPerCapita < pibPerCapita2){
+        printf("PIB Per Capta: Carta 2 venceu\n");
+    } else {
+        printf("PIB Per Capta: O valor das duas cartas são iguais!\n");
+    }
+
+    // Super Poder (superPoder)
+    if (superPoder > superPoder2){
+        printf("Super Poder: Carta 1 venceu\n");
+    } else if (superPoder < superPoder2){
+        printf("Super Poder: Carta 2 venceu\n");
+    } else {
+        printf("Super Poder: O valor das duas cartas são iguais!\n");
+    }   
 
     // Exibir os Resultados das Comparações: Para cada atributo, imprima na tela qual carta venceu (Carta 1 ou Carta 2), exibindo o resultado da comparação (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).
 
@@ -94,6 +147,6 @@ int main () {
 
 
 
-    printf("======================\n");
+    printf("================================\n");
     return 0;
 }
