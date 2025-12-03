@@ -56,6 +56,72 @@ int main () {
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2); 
     printf("Super Poder da Carta 2: %.2f\n", superPoder2);
 
+printf("\n==== Comparação de Cartas ====\n");
+
+    // População (populacao)
+    if (populacao > populacao2) {
+        printf("População: Carta 1 venceu\n");
+    } else if (populacao < populacao2) {
+        printf("População: Carta 2 venceu\n");
+    } else {
+        printf("População: O valor das duas cartas são iguais!\n");
+    }
+
+    // Área (area)
+    if (area > area2){
+        printf("Área: Carta 1 venceu\n");
+    } else if (area < area2){
+        printf("Área: Carta 2 venceu\n");
+    } else {
+        printf("Área: O valor das duas cartas são iguais!\n");
+    }
+
+    // PIB (pib)
+    if (pib > pib2){
+        printf("PIB: Carta 1 venceu\n");
+    } else if (pib < pib2){
+        printf("PIB: Carta 2 venceu\n");
+    } else {
+        printf("PIB: O valor das duas cartas são iguais!\n");
+    }
+
+    // Quantidade de Ponto Turístico (qtdPontoTuristico)
+    if (qtdPontoTuristico > qtdPontoTuristico2) {
+        printf("Pontos Turísticos: Carta 1 venceu\n");
+    } else if (qtdPontoTuristico < qtdPontoTuristico2) {
+        printf("Pontos Turísticos: Carta 2 venceu\n");
+    } else {
+        printf("Pontos Turísticos: O valor das duas cartas são iguais!\n");
+    }
+
+    // Densidade da População (densidadePopulacao) Menor valor é o que vence
+    if (densidadePopulacao < densidadePopulacao2){
+        printf("Densidade População: Carta 1 venceu\n");
+    } else if (densidadePopulacao > densidadePopulacao2){
+        printf("Densidade População: Carta 2 venceu\n");
+    } else {
+        printf("Densidade População: O valor das duas cartas são iguais!\n");
+    }
+
+    // Pib Per Capta (pibPerCapita)
+    if (pibPerCapita > pibPerCapita2){
+        printf("PIB Per Capta: Carta 1 venceu\n");
+    } else if (pibPerCapita < pibPerCapita2){
+        printf("PIB Per Capta: Carta 2 venceu\n");
+    } else {
+        printf("PIB Per Capta: O valor das duas cartas são iguais!\n");
+    }
+
+    // Super Poder (superPoder)
+    if (superPoder > superPoder2){
+        printf("Super Poder: Carta 1 venceu\n");
+    } else if (superPoder < superPoder2){
+        printf("Super Poder: Carta 2 venceu\n");
+    } else {
+        printf("Super Poder: O valor das duas cartas são iguais!\n");
+    }  
+
+
     printf("\n### Comparação de um Único Atributo ###\n");
 
     // Comparação de um Único Atributo
@@ -105,42 +171,52 @@ int main () {
         // 7. PIB Per Capta
         // 8. Super Poder
 
-    int escolhaAtributo = 3;
+    int escolhaAtributo = 2;
 
     switch (escolhaAtributo) {
         case 1:
-        printf("Nome da Cidade\n");
+            printf("Nome da Cidade\n");
+            printf("Carta 1: %s - Carta 2: %s\n", nomeDaCidade, nomeDaCidade2);
         break;
         case 2:
-        printf("População\n");
+            printf("Atributo Escolhido: População\n");
+            if (populacao > populacao2) {
+                printf("População: Carta 1 venceu\n");
+            } else if (populacao < populacao2) {
+                printf("População: Carta 2 venceu\n");
+            } else {
+                printf("População: O valor das duas cartas são iguais!\n");
+            }
         break;
         case 3:
-        printf("Área\n");
+            printf("Atributo Escolhido: Área\n");
+            if (area > area2){
+                printf("Área: Carta 1 venceu\n");
+            } else if (area < area2){
+                printf("Área: Carta 2 venceu\n");
+            } else {
+                printf("Área: O valor das duas cartas são iguais!\n");
+            }
         break;
         case 4:
-        printf("PIB\n");
+        printf("Atributo Escolhido: PIB\n");
         break;
         case 5:
-        printf("Número de Pontos Turísticos\n");
+        printf("Atributo Escolhido: Número de Pontos Turísticos\n");
         break;
         case 6:
-        printf("Densidade Populacional\n");
+        printf("Atributo Escolhido: Densidade Populacional\n");
         break;
         case 7:
-        printf("PIB Per Capta\n");
+        printf("Atributo Escolhido: PIB Per Capta\n");
         break;
         case 8:
-        printf("Super Poder");
+        printf("Atributo Escolhido: Super Poder");
         break;
 
-        default: printf("Opção Inválida. Tente novamente!\n");
+        default: printf("Atributo Não Existe. Tente Novamente!\n");
     }
 
-    if (escolhaAtributo <= 8){
-        
-    } else {
-      prinf("Opção escolhida inválida. Tente novamente!");
-    }
     
 
 
