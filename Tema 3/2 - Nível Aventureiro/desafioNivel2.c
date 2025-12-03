@@ -62,6 +62,15 @@ int main () {
 
     int escolhaAtributo;
 
+    printf("Opções\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+    printf("6. PIB Per Capta\n");
+    printf("7. Super Poder\n");
+
     printf("Digite sua opção: ");
     scanf("%d", &escolhaAtributo);
 
@@ -69,7 +78,7 @@ int main () {
     printf("Carta 1: %s - Carta 2: %s\n", nomeDaCidade, nomeDaCidade2);
 
     switch (escolhaAtributo) {
-        case 2:
+        case 1:
             printf("Atributo Escolhido: População\n");
             if (populacao > populacao2) {
                 printf("Carta 1 venceu\n");
@@ -79,7 +88,7 @@ int main () {
                 printf("O valor das duas cartas são iguais!\n");
             }
         break;
-        case 3:
+        case 2:
             printf("Atributo Escolhido: Área\n");
             if (area > area2){
                 printf("Carta 1 venceu\n");
@@ -89,7 +98,7 @@ int main () {
                 printf("O valor das duas cartas são iguais!\n");
             }
         break;
-        case 4:
+        case 3:
             printf("Atributo Escolhido: PIB\n");
             if (pib > pib2){
                 printf("Carta 1 venceu\n");
@@ -99,7 +108,7 @@ int main () {
                 printf("O valor das duas cartas são iguais!\n");
             }
         break;
-        case 5:
+        case 4:
             printf("Atributo Escolhido: Número de Pontos Turísticos\n");
                 if (qtdPontoTuristico > qtdPontoTuristico2) {
                     printf("Carta 1 venceu\n");
@@ -109,7 +118,7 @@ int main () {
                 printf("O valor das duas cartas são iguais!\n");
             }
         break;
-        case 6:
+        case 5:
             printf("Atributo Escolhido: Densidade Populacional\n");
             if (densidadePopulacao < densidadePopulacao2){
                 printf("Carta 1 venceu\n");
@@ -119,7 +128,7 @@ int main () {
                 printf("O valor das duas cartas são iguais!\n");
             }
         break;
-        case 7:
+        case 6:
             printf("Atributo Escolhido: PIB Per Capta\n");
             if (pibPerCapita > pibPerCapita2){
                 printf("Carta 1 venceu\n");
@@ -129,7 +138,7 @@ int main () {
                 printf("O valor das duas cartas são iguais!\n");
             }
         break;
-        case 8:
+        case 7:
             printf("Atributo Escolhido: Super Poder\n");
             if (superPoder > superPoder2){
                 printf("Carta 1 venceu\n");
